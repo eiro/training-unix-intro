@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html$if(lang)$ lang="$lang$"$endif$>
+<head>
+  <meta charset="utf-8">
+  <meta
+    name="viewport"
+    content="
+      width=device-width,
+      initial-scale=1,
+      minimum-scale=1,
+      maximum-scale=1" />
+$for(author-meta)$<meta name="author" content="$author-meta$">$endfor$
+$if(date-meta)$<meta name="dcterms.date" content="$date-meta$">$endif$
+<title>$if(title-prefix)$$title-prefix$ - $endif$$if(pagetitle)$$pagetitle$$endif$</title>
+$if(quotes)$
+$endif$
+$if(highlighting-css)$<style type="text/css">$highlighting-css$</style>$endif$
+$for(css)$<link rel="stylesheet" href="$css$">$endfor$
+$if(math)$$math$$endif$
+$for(header-includes)$$header-includes$$endfor$
+</head>
+<body>
+    $for(include-before)$$include-before$$endfor$
+$if(title)$<header><h1 class="title">$title$</h1>
+    $for(author)$<h2 class="author">$author$</h2>$endfor$
+    $if(date)$<h3 class="date">$date$</h3>$endif$</header>
+$endif$
+<div class="grid-container">
+<div class="grid-25">
+$if(toc)$<nav id="$idprefix$TOC">$toc$</nav>$endif$
+</div>
+<div class="grid-75">$body$</div>$for(include-after)$$include-after$$endfor$
+</body>
+</html>
