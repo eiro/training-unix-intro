@@ -21,7 +21,10 @@ $for(header-includes)$$header-includes$$endfor$
       <hr/>
       $if(toc)$<nav id="$idprefix$TOC">$toc$</nav>$endif$
   </div>
-<div class="grid-80"><section>$body$<span class="dynamic-px-width"></span></section></div> 
+  <div class="grid-80"><section>
+      $if(title)$<h1>$title$</h1>$endif$
+      $body$
+      <span class="dynamic-px-width"></span></section></div> 
   </main>
 </div> 
 </body></html>
