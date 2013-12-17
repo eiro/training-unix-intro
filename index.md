@@ -78,6 +78,7 @@ pas spécifiques dans la gestion de fichiers.
 * forward (port, auth)
 * proxycommand
 * shell interactif, tmux
+* crontab
 
 exercice final: session partagée avec tmux et ssh restricted command
 
