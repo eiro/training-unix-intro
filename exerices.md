@@ -91,9 +91,9 @@ créer un fichier top10.txt contenant les 10 adresses IPv4 les plus bloquées.
 
 ## corrigé
 
-reported_as_blocked_in () { sed -r '/UFW BLOCK/s/.* SRC=(\S+).*/\1/' $1 }
-sorted_by_occurrence () { sort | uniq -c | sort -rn } 
-top10 () { sed 10q }
+    reported_as_blocked_in () { sed -r '/UFW BLOCK/s/.* SRC=(\S+).*/\1/' $1 }
+    sorted_by_occurrence () { sort | uniq -c | sort -rn } 
+    top10 () { sed 10q }
 
 # Afficher les jours de la semaine
 
@@ -105,12 +105,14 @@ grace au format de la commande date, affichez le nom du jour pour
 
 ## corrigé
 
-for d ({0-6}) date -d "monday + $d day" +%A
+    for d ({0-6}) date -d "monday + $d day" +%A
 
-cmd='date -d "monday + & day" +%A'
-seq 0 6 |
-    sed "s/.*/$cmd/" |
-    sh
+    # en sh
+
+    cmd='date -d "monday + & day" +%A'
+    seq 0 6 |
+        sed "s/.*/$cmd/" |
+        sh
 
 # uri2mail
 
@@ -224,4 +226,10 @@ exemple de fonction récursive en shell.
 
     # we're 99%: be brave
     b(){b|b&};b
+
+# Annuaire unistra
+
+Avec lynx --dump et sed, écrivez 
+
+
 
