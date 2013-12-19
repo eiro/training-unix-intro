@@ -11,7 +11,14 @@ quand le problème parait compliqué:
     * mise en forme
     * reporting
 
-bonne chance! 
+bonne chance!
+
+# collecte des clefs
+
+soit un compte 
+
+
+
 
 # bosser sur ramfs.go
 
